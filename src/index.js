@@ -1,7 +1,6 @@
 console.clear();
 const { Client, Collection, Intents, Discord, MessageEmbed } = require("discord.js");
 const chalk = require('chalk');
-const config = require('./config.json')
 const client = new Client({
     messageSweepInterval: 180,
     messageCacheLifetime: 180,
