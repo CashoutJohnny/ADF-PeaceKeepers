@@ -1,4 +1,5 @@
 const { MessageEmbed } = require('discord.js');
+
 const name = 'kick'
 module.exports = {
     name: name,

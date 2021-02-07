@@ -10,6 +10,7 @@ const client = new Client({
     fetchAllMembers: true,
     ws: { intents: Intents.ALL }
 });
+require('dotenv').config();
 
 client.commands = new Collection();
 require('./database/connection') (client);
