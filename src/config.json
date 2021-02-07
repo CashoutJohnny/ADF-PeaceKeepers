@@ -1,0 +1,13 @@
+{
+    "client": {
+        "token": "ODA3Nzk1MDY1NTg1NTMyOTkx.YB9Lxw.vGwyNxsw93t44wINRM5ZJumjDyQ",
+        "perfix": "!"
+    },
+    "database": {
+        "name": "ADF-PeaceKeepers",
+        "username": "ADF-PeaceKeepers",
+        "password": "Hl8ecsM07E3kuuyA",
+        "host": "adf-peacekeepers.rdqbe.mongodb.net",
+        "type": "mongodb+srv"
+    }
+}
