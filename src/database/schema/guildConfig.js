@@ -6,7 +6,7 @@ const guildConfigSchema = new mongoose.Schema({
     },
     prefix: {
         type: mongoose.SchemaTypes.String,
-        required: false,
+        required: true,
         default: `${process.env.PREFIX}`
     }
 })
