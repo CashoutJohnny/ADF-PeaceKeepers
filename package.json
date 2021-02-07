@@ -1,0 +1,11 @@
+{
+  "name": "adf-peacekeeper",
+  "version": "1.0.0",
+  "main": "./src/index.js",
+  "repository": "https://github.com/CashoutJohnny/ADF-PeaceKeepers.git",
+  "author": "$ashoutJohnny#0031",
+  "license": "MIT",
+  "dependencies": {
+    "discord.js": "^12.5.1"
+  }
+}
