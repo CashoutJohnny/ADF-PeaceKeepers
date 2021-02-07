@@ -4,13 +4,14 @@ module.exports = {
     name: name,
     category: "admin",
     run: async (client, message, args) => {
+        message.delete();
         if (message.member.hasPermission('KICK_MEMBERS')) {
             const reason = message.content.split(" ").slice(2).join(' ');
             const user = message.mentions.users.first();
             const embed = new MessageEmbed().setColor('ff0000').setTitle(`${client.user.username} Moderation`).setDescription("You have been kicked from ADF PeaceKeepers").addFields({name: 'Reason:', value: `${reason}`},{name: 'Moderator:', value: `${message.author.tag}`}).setFooter("© 2020: ADF PeaceKeeper", client.user.avatarURL()).setTimestamp();
             if (user) {
                 const member = message.guild.member(user)
-                if(!reason) return message.reply('Please provide a reason!')
+                if(!reason) return message.reply('Please provide a reason!').then(message => message.delete({ timeout: 3000}));
                 if (member.hasPermission('KICK_MEMBERS')) return message.reply('This user is a Staff member I cannot do that!').then(message => message.delete({ timeout: 4000}));
                 if (member) {
                     member.send(embed).then(() => {
