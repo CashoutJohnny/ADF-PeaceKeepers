@@ -1,4 +1,4 @@
 const guildConfig = require('../database/schema/guildConfig');
 module.exports = async (guild) => {
-    await guildConfig.create({ guildID: guild.id });
+    await guildConfig.deleteOne({ guildID: guild.id });
 }

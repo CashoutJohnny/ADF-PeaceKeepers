@@ -1,6 +1,5 @@
-const mongoose = require('mongoose')
-const config = require('../../config.json');
-const guildConfig = new mongoose.Schema({
+const mongoose = require('mongoose');
+const guildConfigSchema = new mongoose.Schema({
     guildID: {
         type: mongoose.SchemaTypes.String,
         required: true,
@@ -8,8 +7,8 @@ const guildConfig = new mongoose.Schema({
     prefix: {
         type: mongoose.SchemaTypes.String,
         required: false,
-        default: `${config.client.prefix}`
+        default: `${process.env.PREFIX}`
     }
-});
+})
 
 module.exports = mongoose.model('guildConfig', guildConfigSchema);

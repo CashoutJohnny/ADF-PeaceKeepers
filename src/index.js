@@ -1,4 +1,5 @@
 console.clear();
+require('dotenv').config();
 const { Client, Collection, Intents, Discord } = require("discord.js");
 const chalk = require('chalk');
 const config = require('./config.json')
@@ -12,13 +13,15 @@ const client = new Client({
 });
 
 client.commands = new Collection();
-
+require('./database/connection') (client);
+require('./command') (client);
 
 client.once('ready', async () => require('./events/ready') (client));
-client.on('message', async () => require('./events/message') (client, message));
-client.on('guildCrete', async (guild) => require('./events/guildCreate') (guild));
+client.on('message', async (message) => require('./events/message') (client, message));
+client.on('guildCreate', async (guild) => require('./events/guildCreate') (guild));
+client.on('guildDelete', async (guild) => require('./events/guildDelete') (guild));
 console.log(chalk.grey.bold("[") + chalk.redBright("HANDLER") + chalk.grey.bold("] ") + chalk.white("All events have been loaded."));
 
 
 
-client.login(config.client.token);
+client.login(process.env.TOKEN);
