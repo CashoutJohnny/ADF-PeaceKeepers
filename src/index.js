@@ -11,6 +11,8 @@ const client = new Client({
 });
 require('dotenv').config();
 
+
+
 client.commands = new Collection();
 require('./database/connection') (client);
 require('./command') (client);
@@ -22,7 +24,7 @@ client.on('guildDelete', async (guild) => require('./events/guildDelete') (guild
 console.log(chalk.grey.bold("[") + chalk.redBright("HANDLER") + chalk.grey.bold("] ") + chalk.white("All events have been loaded."));
 
 
-client.on('guildMemberAdd', (member, message) => {
+client.on('guildMemberAdd', (member) => {
     const channel = member.guild.channels.cache.find(ch => ch.name === 'welcome');
     if (!channel) return;
     const embed = new MessageEmbed()
