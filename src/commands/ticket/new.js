@@ -24,7 +24,7 @@ module.exports = {
 			channel.send(`Hi ${message.author}, welcome to your ticket! Please be patient, we will be with you shortly. If you would like to close this ticket please run \`${process.env.PREFIX}close\``);
 			let logchannel = message.guild.channels.cache.find(channel => channel.name === 'server-tickets')
 			if(logchannel) {
-				logchannel.send(`Ticket ${message.author.id} created. Click the following to veiw <#${message.author.id}>`);
+				logchannel.send(`<@808072916046577664> ${message.author.id} Ticket a created. Click the following to veiw <#${message.author.id}>`);
 			}
 		});
 	},
