@@ -1,5 +1,4 @@
 console.clear();
-require('dotenv').config();
 const { Client, Collection, Intents, Discord, MessageEmbed } = require("discord.js");
 const chalk = require('chalk');
 const config = require('./config.json')
