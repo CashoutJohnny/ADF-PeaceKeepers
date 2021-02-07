@@ -19,7 +19,7 @@ module.exports = {
                             const sembed = new MessageEmbed().setDescription(`✅ Successfully kicked ${user.tag} with reason: ${reason}`).setColor("GREEN")
                             message.channel.send(sembed)
                             const logsembed = new MessageEmbed().setColor('#ff0000').setTitle('Member Kicked').addFields({name: 'User:', value: `${member}`},{name: 'Moderator:', value: `${message.author}`},{name: 'Reason:', value: `${reason}`}).setTimestamp().setFooter(`${client.user.username} Moderation`);
-                            const logschannel = message.guild.channels.cache.find(channel => channel.id === '807840260885184561') 
+                            const logschannel = message.guild.channels.cache.find(channel => channel.id === '804604858777731122') 
                             logschannel.send(logsembed)
                         }).catch(err => {
                             message.reply('❌ Something went wrong! Please try again later.').then(message => message.delete({ timeout: 3000}));

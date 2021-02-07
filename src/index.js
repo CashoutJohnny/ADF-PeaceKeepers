@@ -24,7 +24,7 @@ console.log(chalk.grey.bold("[") + chalk.redBright("HANDLER") + chalk.grey.bold(
 
 
 client.on('guildMemberAdd', (member) => {
-    const channel = member.guild.channels.cache.find(ch => ch.id === '807840261216272405');
+    const channel = member.guild.channels.cache.find(ch => ch.id === '804027480092180532');
     if (!channel) return;
     const embed = new MessageEmbed()
     .setColor("RANDOM")
